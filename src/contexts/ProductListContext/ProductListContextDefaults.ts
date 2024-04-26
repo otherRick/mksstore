@@ -5,8 +5,8 @@ export interface IProduct {
   description: string;
   photo: string;
   price: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 export interface IProductListContextDefaults {
   isLoading: boolean;

@@ -39,7 +39,7 @@ const Meta: Meta<typeof Dashboard> = {
 /**
  * Each export will be a state for the meta component
  */
-export const Default: Story = {
+export const Success: Story = {
   parameters: {
     msw: {
       handlers
@@ -76,6 +76,7 @@ export const Error: Story = {
     }
   }
 };
+
 export const Empty: Story = {
   parameters: {
     msw: {

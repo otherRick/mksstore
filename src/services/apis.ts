@@ -10,24 +10,23 @@ interface iParams {
 }
 
 export const getProductList = async (page: number = 1, rowa: number = 15) => {
-  try {
-    const params: iParams = {
-      page: 0,
-      rows: 0,
-      sortBy: '',
-      orderBy: ''
-    };
+  // try {
+  const params: iParams = {
+    page: 0,
+    rows: 0,
+    sortBy: '',
+    orderBy: ''
+  };
 
-    params.page = page;
-    params.rows = rowa;
-    params.sortBy = 'id';
-    params.orderBy = 'DESC';
+  params.page = page;
+  params.rows = rowa;
+  params.sortBy = 'id';
+  params.orderBy = 'DESC';
 
-    const response = await axios.get(baseURL, { params });
+  const response = await axios.get(baseURL, { params });
 
-    return response.data?.products;
-  } catch (error) {
-    console.error('Erro ao buscar dados:', error);
-    throw error;
-  }
+  return response.data?.products;
+  // } catch (error) {
+  //   // return error
+  // }
 };
