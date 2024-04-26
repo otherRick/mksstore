@@ -5,9 +5,8 @@ export const Dashboard = () => {
   const { data, error, isLoading } = useProductListContext();
 
   if (isLoading) return <div>Loading products...</div>;
-
   if (error) return <div>Error fetching products: {error.message}</div>;
-  if (!data) return <div>error fetching data</div>;
+  if (!data || data.length === 0) return <div>error fetching data</div>;
 
   return (
     <div className={classes.container}>
