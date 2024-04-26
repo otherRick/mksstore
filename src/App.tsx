@@ -1,17 +1,12 @@
-import { useState } from 'react';
-import classes from './App.module.scss';
+import { Router } from './routes/Router';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-function App() {
-  const [count, setCount] = useState(0);
+const queryClient = new QueryClient();
 
+export function App() {
   return (
-    <div className={classes.container}>
-      <button className={classes.button} onClick={() => setCount(count + 1)}>
-        {count}
-      </button>
-      <p onClick={() => setCount(count + 1)}>{count}</p>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Router />
+    </QueryClientProvider>
   );
 }
-
-export default App;

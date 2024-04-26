@@ -11,8 +11,12 @@
     "test": "jest --coverage --watchAll"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.32.0",
+    "@types/react-query": "^1.2.9",
+    "axios": "^1.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
