@@ -11,18 +11,19 @@ export const Dashboard = () => {
 
   return (
     <div className={classes.container}>
-      {data.map(({ brand, description, id, name, photo, price }) => {
-        return (
-          <ProductCard
-            brand={brand}
-            id={id}
-            name={name}
-            photo={photo}
-            price={price}
-            description={description}
-          />
-        );
-      })}
+      <div className={classes.productGrid}>
+        {data.map(({ description, id, name, photo, price }) => {
+          return (
+            <ProductCard
+              id={id}
+              name={name}
+              photo={photo}
+              price={price}
+              description={description}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,50 @@
+.pool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+}
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+}
+.rounded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+}
+.roundedSmall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+
+  & .img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+  }
+  & .text {
+    color: white;
+  }
+}
+
+.blue {
+  background-color: #0f52ba;
+}
+.black {
+  background-color: black;
+}
