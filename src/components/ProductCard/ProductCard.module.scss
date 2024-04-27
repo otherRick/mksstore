@@ -5,7 +5,39 @@
   align-items: center;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
   width: 215px;
+}
+.containerSkeleton {
+  border-radius: 8px;
+  width: 215px;
+  height: 300px;
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+@keyframes shimmer {
+  0% {
+    background-color: rgb(232, 232, 232);
+  }
+  50% {
+    background-color: rgb(255, 255, 255);
+  }
+  100% {
+    background-color: rgb(232, 232, 232);
+  }
+}
+
+.productGrid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .productGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
 }
 
 .item {

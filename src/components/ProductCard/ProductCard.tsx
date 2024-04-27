@@ -3,6 +3,7 @@ import { Button } from '../Button/Button';
 import { Text } from '../Text/Text';
 import classes from './ProductCard.module.scss';
 import shoppingIcon from '../../assets/shoppingIcon.svg';
+import { motion } from 'framer-motion';
 
 export const ProductCard = ({ id, photo, name, description, price }: IProduct) => {
   const formattedPrice = new Intl.NumberFormat('pt-BR', {
@@ -14,22 +15,22 @@ export const ProductCard = ({ id, photo, name, description, price }: IProduct) =
     .format(Number(price))
     .slice(3);
 
-  console.log();
-
   return (
-    <div className={classes.container} key={id}>
-      <div className={classes.item}>
-        <img src={photo} alt={name} />
+    <motion.div whileHover={{ scale: 1.09 }} whileTap={{ scale: 1.1 }}>
+      <div className={classes.container} key={id}>
+        <div className={classes.item}>
+          <img src={photo} alt={name} />
 
-        <div className={classes.title}>
-          <Text className={classes.name} size='medium'>
-            {name}
-          </Text>
-          <Text className={classes.price}>{`R$${formattedPrice}`}</Text>
+          <div className={classes.title}>
+            <Text className={classes.name} size='medium'>
+              {name}
+            </Text>
+            <Text className={classes.price}>{`R$${formattedPrice}`}</Text>
+          </div>
+          <Text className={classes.descBox}>{description}</Text>
         </div>
-        <Text className={classes.descBox}>{description}</Text>
+        <Button icon={shoppingIcon} text='COMPRAR' />
       </div>
-      <Button icon={shoppingIcon} text='COMPRAR' />
-    </div>
+    </motion.div>
   );
 };
