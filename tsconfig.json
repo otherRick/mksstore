@@ -21,6 +21,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "./jest.setup.ts"],
+  "include": ["src", "./jest.setup.ts", "firebase.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
