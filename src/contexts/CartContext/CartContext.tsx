@@ -4,16 +4,17 @@ import { IProduct } from '../ProductListContext/ProductListContextDefaults';
 
 interface ICartProvider {
   children: ReactNode;
+  cartInitialValue?: IProductCart[];
 }
 
 export const CartContext = createContext(cartContextDefaults);
 
-export const CartProvider = ({ children }: ICartProvider) => {
+export const CartProvider = ({ children, cartInitialValue = [] }: ICartProvider) => {
   /**
    * this would, ideally, be sent to an api to save on database.
    * but for the sake of this challenge, will only be saved locally.
    */
-  const [cart, setCart] = useState<IProductCart[]>([]);
+  const [cart, setCart] = useState<IProductCart[]>(cartInitialValue);
 
   const getCartProductIndex = useCallback(
     (productId: number) => {

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/30</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/30</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -102,27 +102,27 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Text } from '../Text/Text';
 import classes from './QuantitySelector.module.scss';
 interface IQuantitySelect {
@@ -131,28 +131,28 @@ interface IQuantitySelect {
   handleSubtractProduct: () =&gt; void;
 }
 &nbsp;
-export const QuantitySelector = <span class="fstat-no" title="function not covered" >({</span>
-<span class="cstat-no" title="statement not covered" >  handleAddProduct,</span>
-<span class="cstat-no" title="statement not covered" >  handleSubtractProduct,</span>
-<span class="cstat-no" title="statement not covered" >  quantity = 0</span>
-<span class="cstat-no" title="statement not covered" >}: IQuantitySelect) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div className={classes.container}&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;Text className={classes.qtd}&gt;Qtd:&lt;/Text&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className={classes.counter}&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;button onClick={handleSubtractProduct} className={classes.buttonMinus}&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Text className={classes.text}&gt;-&lt;/Text&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className={classes.quantity}&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Text className={classes.text}&gt;{String(quantity)}&lt;/Text&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;button onClick={handleAddProduct} className={classes.buttonPlus}&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Text className={classes.text}&gt;+&lt;/Text&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >  );</span>
-<span class="cstat-no" title="statement not covered" >};</span>
+export const QuantitySelector = ({
+  handleAddProduct,
+  handleSubtractProduct,
+  quantity = 0
+}: IQuantitySelect) =&gt; {
+  return (
+    &lt;div className={classes.container}&gt;
+      &lt;Text className={classes.qtd}&gt;Qtd:&lt;/Text&gt;
+      &lt;div className={classes.counter}&gt;
+        &lt;button onClick={handleSubtractProduct} className={classes.buttonMinus}&gt;
+          &lt;Text className={classes.text}&gt;-&lt;/Text&gt;
+        &lt;/button&gt;
+        &lt;div className={classes.quantity}&gt;
+          &lt;Text className={classes.text}&gt;{String(quantity)}&lt;/Text&gt;
+        &lt;/div&gt;
+        &lt;button onClick={handleAddProduct} className={classes.buttonPlus}&gt;
+          &lt;Text className={classes.text}&gt;+&lt;/Text&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -160,7 +160,7 @@ export const QuantitySelector = <span class="fstat-no" title="function not cover
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-04-28T16:56:16.586Z
+                at 2024-04-28T19:53:21.347Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

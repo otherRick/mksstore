@@ -13,11 +13,6 @@ interface IProductListProvider {
 export const ProductListContext = createContext(productListContextDefaults);
 
 export const ProductListProvider = ({ children }: IProductListProvider) => {
-  // const fetchProducts = async () => {
-  //   const res = await getProductList();
-  //   return res.products;
-  // };
-
   const { isLoading, error, data } = useQuery<IProduct[]>({
     queryKey: ['products'],
     queryFn: () => getProductList()

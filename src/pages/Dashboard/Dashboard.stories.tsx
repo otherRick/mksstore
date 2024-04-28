@@ -7,16 +7,9 @@ import { HttpResponse, delay, http } from 'msw';
 
 type Story = StoryObj<typeof Meta>;
 
-/**
- * Meta: the main component to be rendered. I.e.: Dashboard
- * must be default export
- */
 const Meta: Meta<typeof Dashboard> = {
   title: 'Pages/Dashboard',
   component: Dashboard,
-  /**
-   * a function that will take place over the component itself.
-   */
   decorators: (Story) => (
     <QueryClientProvider
       client={
@@ -36,9 +29,6 @@ const Meta: Meta<typeof Dashboard> = {
   )
 };
 
-/**
- * Each export will be a state for the meta component
- */
 export const Success: Story = {
   parameters: {
     msw: {

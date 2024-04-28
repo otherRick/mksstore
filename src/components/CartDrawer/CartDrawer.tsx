@@ -6,18 +6,14 @@ import classes from './CartDrawer.module.scss';
 import { AnimatePresence } from 'framer-motion';
 
 interface ICartDrawer {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 
-export const CartDrawer = ({ isOpen, onClose }: ICartDrawer) => {
+export const CartDrawer = ({ isOpen = false, onClose }: ICartDrawer) => {
   const { cart, getCartTotalPrice, updateCartProductQuantity, removeCartProduct } =
     useCartContext();
   const fomrattedValue = new Intl.NumberFormat('pt-BR').format(getCartTotalPrice());
-
-  const handleClose = () => {
-    onClose();
-  };
 
   const handleAddProduct = (productId: number) => updateCartProductQuantity(productId, 'add');
 
@@ -30,7 +26,7 @@ export const CartDrawer = ({ isOpen, onClose }: ICartDrawer) => {
 
   return (
     <div className={`${classes.container} ${isOpen ? classes.open : ''}`}>
-      <div className={isOpen ? classes.overlay : ''} onClick={handleClose}></div>
+      <div className={isOpen ? classes.overlay : ''} onClick={onClose}></div>
       <div className={classes.drawer}>
         <div className={classes.items}>
           <div className={classes.title}>
@@ -48,7 +44,7 @@ export const CartDrawer = ({ isOpen, onClose }: ICartDrawer) => {
               text='X'
               textColor='white'
               textSize='medium'
-              onClick={handleClose}
+              onClick={onClose}
             />
           </div>
           <div className={classes.products}>
@@ -63,7 +59,7 @@ export const CartDrawer = ({ isOpen, onClose }: ICartDrawer) => {
                   imgUrl={product.photo}
                   key={product.id}
                   name={product.name}
-                  price={product.price}
+                  price={Number(product.price)}
                 />
               ))}
             </AnimatePresence>

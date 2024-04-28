@@ -8,7 +8,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/hyperxcloudstinger.webp",
       "price": "600.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     },
     {
       "id": 7,
@@ -18,7 +19,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/hyperx-cloudrevolver.webp",
       "price": "1000.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     },
     {
       "id": 6,
@@ -28,7 +30,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/ipadair.webp",
       "price": "4200.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     },
     {
       "id": 5,
@@ -38,7 +41,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/applewatch-series7.webp",
       "price": "3200.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     },
     {
       "id": 4,
@@ -48,7 +52,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/iphone12x64.webp",
       "price": "6500.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     },
     {
       "id": 3,
@@ -58,7 +63,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/macbookair.webp",
       "price": "8200.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     },
     {
       "id": 2,
@@ -68,7 +74,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/airpods.webp",
       "price": "1200.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     },
     {
       "id": 1,
@@ -78,7 +85,8 @@
       "photo": "https://mks-sistemas.nyc3.digitaloceanspaces.com/products/iphone11x128.webp",
       "price": "5000.00",
       "createdAt": "2023-10-30T16:25:01.093Z",
-      "updatedAt": "2023-10-30T16:25:01.093Z"
+      "updatedAt": "2023-10-30T16:25:01.093Z",
+      "quantity": 1
     }
   ],
   "count": 8
