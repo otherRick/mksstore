@@ -10,9 +10,9 @@ test('loading', () => {
 
   render(<Loading />);
 
-  const loadingText = screen.getByText(/Loading products.../i);
+  const loadingText = screen.getAllByTestId('product-card-skeleton');
 
-  expect(loadingText).toBeInTheDocument();
+  expect(loadingText[0]).toHaveClass('containerSkeleton');
 });
 
 test('error', async () => {

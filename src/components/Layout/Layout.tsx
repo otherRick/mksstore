@@ -5,39 +5,43 @@ import { Text } from '../Text/Text';
 import { Button } from '../Button/Button';
 import cartIcon from '../../assets/cart.svg';
 import { CartDrawer } from '../CartDrawer/CartDrawer';
+import { useCartContext } from '../../contexts/CartContext/useCartContext';
 
 export const Layout = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [openDrawer, setOpenDrawer] = useState(false);
+  const { getCartTotalProducts } = useCartContext();
+
+  const openDrawerHandler = () => setOpenDrawer(!openDrawer);
 
   useEffect(() => {
     if (location.pathname === '/') {
       navigate('/dashboard');
     }
-  }, []);
+  }, [navigate, location]);
+
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <Link className={classes.brand} to='/dashboard'>
+        <Link role='link' className={classes.brand} to='/dashboard'>
           <Text color='white' size='great'>
             MKS
           </Text>
           <Text color='white'>Sistemas</Text>
         </Link>
         <Button
-          onClick={() => {
-            setOpenDrawer(!openDrawer);
-          }}
+          disabled={!getCartTotalProducts()}
+          onClick={openDrawerHandler}
           textColor='black'
           color='white'
           type='rectangle'
           icon={cartIcon}
-          text='0'
+          text={String(getCartTotalProducts())}
           textSize='medium'
         />
       </div>
-      <CartDrawer value={324.0} isOpen={openDrawer} onClose={() => setOpenDrawer(false)} />
+      <CartDrawer isOpen={openDrawer} onClose={() => setOpenDrawer(false)} />
       <Outlet />
     </div>
   );

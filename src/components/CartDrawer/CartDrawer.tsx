@@ -1,19 +1,31 @@
+import { useCartContext } from '../../contexts/CartContext/useCartContext';
 import { Button } from '../Button/Button';
 import { CartProductCard } from '../CartProductCard/CartProductCard';
 import { Text } from '../Text/Text';
 import classes from './CartDrawer.module.scss';
+import { AnimatePresence } from 'framer-motion';
 
 interface ICartDrawer {
-  value: number;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const CartDrawer = ({ value = 2321.0, isOpen, onClose }: ICartDrawer) => {
-  const fomrattedValue = new Intl.NumberFormat('pt-BR').format(value);
+export const CartDrawer = ({ isOpen, onClose }: ICartDrawer) => {
+  const { cart, getCartTotalPrice, updateCartProductQuantity, removeCartProduct } =
+    useCartContext();
+  const fomrattedValue = new Intl.NumberFormat('pt-BR').format(getCartTotalPrice());
 
   const handleClose = () => {
     onClose();
+  };
+
+  const handleAddProduct = (productId: number) => updateCartProductQuantity(productId, 'add');
+
+  const handleSubtractProduct = (productId: number) =>
+    updateCartProductQuantity(productId, 'subtract');
+
+  const onRemoveProduct = (productId: number) => {
+    removeCartProduct(productId);
   };
 
   return (
@@ -40,7 +52,21 @@ export const CartDrawer = ({ value = 2321.0, isOpen, onClose }: ICartDrawer) => 
             />
           </div>
           <div className={classes.products}>
-            <CartProductCard />
+            <AnimatePresence>
+              {cart.map((product) => (
+                <CartProductCard
+                  id={product.id}
+                  handleAddProduct={handleAddProduct}
+                  handleSubtractProduct={handleSubtractProduct}
+                  onRemove={onRemoveProduct}
+                  quantity={product.quantity}
+                  imgUrl={product.photo}
+                  key={product.id}
+                  name={product.name}
+                  price={product.price}
+                />
+              ))}
+            </AnimatePresence>
           </div>
           <div className={classes.resume}>
             <Text color='white' size='large'>

@@ -10,6 +10,7 @@ interface IButton {
   icon?: string;
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 export const Button = ({
@@ -20,13 +21,14 @@ export const Button = ({
   textColor = 'white',
   className,
   icon,
-  onClick
+  onClick,
+  disabled
 }: IButton) => {
   const combinedClassName =
-    `${classes.button} ${classes[type]} ${classes[color]} ${className}`.trim();
+    `${classes.button} ${classes[type]} ${classes[color]} ${disabled ? classes.disabled : ''} ${className}`.trim();
 
   return (
-    <button onClick={onClick} className={combinedClassName}>
+    <button disabled={disabled} onClick={onClick} className={combinedClassName}>
       {icon ? <img className={classes.img} src={icon} /> : null}
       {text ? (
         <Text color={textColor} className={classes.text} size={textSize}>

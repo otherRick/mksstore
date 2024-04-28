@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/contexts/ProductListContext/ProductListContextDefaults.ts</title>
+    <title>Code coverage report for src/contexts/CartContext/CartContextDefaults.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/contexts/ProductListContext</a> ProductListContextDefaults.ts</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/contexts/CartContext</a> CartContextDefaults.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/21</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/21</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
@@ -84,7 +84,9 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -105,26 +107,30 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export interface IProduct {
-  id: number;
-  name: string;
-  brand?: string;
-  description: string;
-  photo: string;
-  price: number;
-  createdAt?: string;
-  updatedAt?: string;
-}
-export interface IProductListContextDefaults {
-  isLoading: boolean;
-  error: Error | null;
-  data?: IProduct[];
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IProduct } from '../ProductListContext/ProductListContextDefaults';
+&nbsp;
+export interface IProductCart extends IProduct {
+  quantity: number;
 }
 &nbsp;
-export const productListContextDefaults: IProductListContextDefaults = {
-  isLoading: false,
-  error: null,
-  data: []
+export interface ICartContextDefaults {
+  cart: IProductCart[];
+  addCartProduct: (product: IProduct) =&gt; void;
+  removeCartProduct: (productId: number) =&gt; void;
+  updateCartProductQuantity: (productId: number, operation: 'add' | 'subtract') =&gt; void;
+  getCartTotalPrice: () =&gt; number;
+  getCartTotalProducts: () =&gt; number;
+}
+&nbsp;
+export const cartContextDefaults: ICartContextDefaults = {
+  cart: [],
+  addCartProduct: <span class="fstat-no" title="function not covered" >() =&gt; {},</span>
+  removeCartProduct: <span class="fstat-no" title="function not covered" >() =&gt; {},</span>
+  updateCartProductQuantity: <span class="fstat-no" title="function not covered" >() =&gt; {},</span>
+  getCartTotalPrice: () =&gt; 0,
+  getCartTotalProducts: () =&gt; 0
 };
 &nbsp;</pre></td></tr></table></pre>
 

@@ -4,8 +4,10 @@ import { Text } from '../Text/Text';
 import classes from './ProductCard.module.scss';
 import shoppingIcon from '../../assets/shoppingIcon.svg';
 import { motion } from 'framer-motion';
+import { useCartContext } from '../../contexts/CartContext/useCartContext';
 
 export const ProductCard = ({ id, photo, name, description, price }: IProduct) => {
+  const { addCartProduct } = useCartContext();
   const formattedPrice = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
@@ -14,6 +16,10 @@ export const ProductCard = ({ id, photo, name, description, price }: IProduct) =
   })
     .format(Number(price))
     .slice(3);
+
+  const buyHandler = () => {
+    addCartProduct({ id, photo, name, description, price });
+  };
 
   return (
     <motion.div whileHover={{ scale: 1.09 }} whileTap={{ scale: 1.1 }}>
@@ -29,7 +35,7 @@ export const ProductCard = ({ id, photo, name, description, price }: IProduct) =
           </div>
           <Text className={classes.descBox}>{description}</Text>
         </div>
-        <Button icon={shoppingIcon} text='COMPRAR' />
+        <Button onClick={buyHandler} icon={shoppingIcon} text='COMPRAR' />
       </div>
     </motion.div>
   );

@@ -4,7 +4,7 @@ export interface IProduct {
   brand?: string;
   description: string;
   photo: string;
-  price: string;
+  price: number;
   createdAt?: string;
   updatedAt?: string;
 }

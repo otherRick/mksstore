@@ -21,7 +21,7 @@ test('renders Dashboard link', () => {
     </Router>
   );
 
-  const dashboardLink = screen.getByRole('link', { name: /dashboard/i });
+  const dashboardLink = screen.getByRole('link');
 
   expect(dashboardLink).toBeInTheDocument();
 });

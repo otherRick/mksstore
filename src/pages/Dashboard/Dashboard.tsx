@@ -16,6 +16,7 @@ export const Dashboard = () => {
         {data.map(({ description, id, name, photo, price }) => {
           return (
             <ProductCard
+              key={id}
               id={id}
               name={name}
               photo={photo}
