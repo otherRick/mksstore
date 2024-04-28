@@ -4,14 +4,14 @@ Este é um projeto desenvolvido como parte do processo seletivo para a vaga na M
 
 ## Acesso ao Projeto Hospedado
 
-Você pode acessar o projeto hospedado [aqui](https://mkssistema-706df.web.app/).
+Você pode acessar o projeto hospedado [aqui](https://mkssistema-706df.firebaseapp.com/).
 
 ## Como Usar Localmente
 
 1. Clone o repositório: `git clone https://github.com/otherRick/mksstore.git`
 2. Instale as dependências: `npm install`
-3. Inicie o servidor de desenvolvimento: `npm run dev`
-4. Abra o navegador e acesse `http://localhost:3000`
+3. Inicie o servidor de desenvolvimento: `npm run start`
+4. Abra o navegador e acesse `http://localhost:5173`
 
 ## Como Usar Storybook
 

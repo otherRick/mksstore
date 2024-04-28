@@ -1,8 +1,17 @@
 {
   "hosting": {
-    "site": "mkssistema-706df",
-    "public": "dist",
+    "source": ".",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/dashboard"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "frameworksBackend": {
       "region": "us-west1"
     }
