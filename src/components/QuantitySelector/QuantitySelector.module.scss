@@ -1,0 +1,102 @@
+.container {
+  .counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    width: 55px;
+    height: 19px;
+
+    .buttonMinus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 8px;
+      height: 15px;
+      width: 15px;
+      background-color: white;
+      border-right: 1px solid #bfbfbf;
+      border-radius: 0;
+    }
+    .amount {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 8px;
+      height: 15px;
+      width: 15px;
+      background-color: white;
+      border-radius: 0;
+    }
+    .buttonPlus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 8px;
+      height: 15px;
+      width: 15px;
+      background-color: white;
+      border-left: 1px solid #bfbfbf;
+      border-radius: 0;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .counter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      border: 1px solid #bfbfbf;
+      border-radius: 4px;
+      width: 95px;
+      height: 35px;
+
+      .buttonMinus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 8px;
+        height: 20px;
+        width: 33px;
+        background-color: white;
+        border-right: 1px solid #bfbfbf;
+        border-radius: 0;
+      }
+      .amount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 8px;
+        height: 20px;
+        width: 33px;
+        background-color: white;
+        border-radius: 0;
+      }
+      .buttonPlus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 8px;
+        height: 20px;
+        width: 33px;
+        background-color: white;
+        border-left: 1px solid #bfbfbf;
+        border-radius: 0;
+      }
+      .text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+      }
+    }
+
+    .qtd {
+      display: none;
+    }
+  }
+}

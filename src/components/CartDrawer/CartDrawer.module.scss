@@ -1,0 +1,92 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 480px;
+  height: 100%;
+  background-color: #95b9ef;
+  transition: right 0.3s ease;
+
+  &.open {
+    right: 0;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  background-color: #0f52ba;
+  padding: 40px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.textTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  padding: 10px;
+  overflow: auto;
+  gap: 10px;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  scrollbar-width: none;
+}
+
+.resume {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 340px;
+    height: 100%;
+    background-color: #95b9ef;
+    transition: right 0.3s ease;
+
+    &.open {
+      right: 0;
+    }
+  }
+}
